@@ -15,40 +15,20 @@ public class Category {
         System.out.print("SELECT CATEGORY : ");
         String category = sc.nextLine().toLowerCase();
         HashMap<String, List<Question>> storeQuestion = service.QuizeService.loadQuestion();
-        List<Question> javaQuestions = storeQuestion.get("java");
 
         switch (category) {
             case "j":
-                for (int i = 0; i < javaQuestions.size(); i++) {
-                    Question q = javaQuestions.get(i);
+                List<Question> javaQuestions = storeQuestion.get("java");
 
-                    System.out.println(q.getQuestion());
-
-                    HashMap<String, String> opts = q.getOption();
-
-                    opts.forEach((opt, value) -> {
-                        System.out.println(opt +  ": " + value);
-                    });
-
-                    System.out.print("YOUR ANSWER : ");
-                    String ans = sc.nextLine();
-
-                    String corrAns = q.getCorrAns();
-
-                    if (ans.matches(corrAns)) {
-                        System.out.println("✅ CORRECT ANSWER .");
-                    } else {
-                        System.out.println("❌ Wrong! ✅ Correct answer: " + corrAns);
-                    }
-
-                }
-
+                printQuestions(sc, javaQuestions);
                 break;
             case "s":
-
+                List<Question> sciencQuestions = storeQuestion.get("science");
+                printQuestions(sc, sciencQuestions);
                 break;
             case "gk":
-
+                List<Question> gkQuestions = storeQuestion.get("gk");
+                printQuestions(sc, gkQuestions);
                 break;
             case "e":
                 System.exit(0);
@@ -59,4 +39,33 @@ public class Category {
         }
 
     }
+
+    private static void printQuestions(Scanner sc, List<Question> question) {
+            int score = 1;
+        for (int i = 0; i < question.size(); i++) {
+            Question q = question.get(i);
+            System.out.println(q.getQuestion());
+
+            HashMap<String, String> opts = q.getOption();
+            opts.forEach((opt, value) -> {
+                System.out.println(opt + " : " + value);
+            });
+
+            System.out.print("\n ANSWER (ENTER ANSWER IN a,b,c,d) : ");
+            String ans = sc.nextLine();
+
+            String corrans = q.getCorrAns();
+            if (ans.matches(corrans)) {
+                 q.score++;
+                System.out.println("\n ✅ CORRECT ANSWER . " );
+                 
+            } else {
+                System.out.println("\n ❌ Wrong! ✅ Correct answer : "   );
+            }
+        }
+
+    }
+
+    
+
 }

@@ -5,12 +5,14 @@ import java.util.Scanner;
 import model.Question;
 
 public class Main {
-      public static void main(String[] args) {
-         HashMap<String , List<Question> > map =new HashMap<>();
-        Scanner sc= new  Scanner( System.in);
-            System.out.println("""
+    public static void main(String[] args) {
+        HashMap<String, List<Question>> map = new HashMap<>();
+        Scanner sc = new Scanner(System.in);
+
+        while (true) {
+             System.out.println("""
                 ENTER :
-                 VC : VIEW CATEGORY
+                VC : VIEW CATEGORY
                 VS : VIEW SCORE
                 E : EXIT
 
@@ -19,21 +21,22 @@ public class Main {
         String choice = sc.nextLine().toLowerCase();
 
         switch (choice) {
-            case  "vc":
-            model.Category.selectCategory(sc,map);
- 
- 
-            break;
+            case "vc":
+                model.Category.selectCategory(sc, map);
 
-                case  "vs":
-                
                 break;
 
-                case  "e":
-                
+            case "vs":
+                 
+                break;
+
+            case "e":
+
                 break;
             default:
                 break;
         }
-      }
+        }
+        
+    }
 }
