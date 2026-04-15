@@ -10,33 +10,37 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         while (true) {
-             System.out.println("""
-                ENTER :
-                VC : VIEW CATEGORY
-                VS : VIEW SCORE
-                E : EXIT
+            System.out.println("""
+                    ENTER :
+                    VC : VIEW CATEGORY
+                    VS : VIEW SCORE
+                    E : EXIT
 
-                        """);
-        System.out.print("YOUR CHOICE : ");
-        String choice = sc.nextLine().toLowerCase();
+                            """);
+            System.out.print("YOUR CHOICE : ");
+            String choice = sc.nextLine().toLowerCase();
 
-        switch (choice) {
-            case "vc":
-                model.Category.selectCategory(sc, map);
+            switch (choice) {
+                case "vc":
+                    model.Category.selectCategory(sc, map);
 
-                break;
+                    break;
 
-            case "vs":
-                 
-                break;
+                case "vs":
 
-            case "e":
+                    System.out.println("YOU SCORE : " + model.Category.calculateScore() + "/10");
 
-                break;
-            default:
-                break;
+                    break;
+
+                case "e":
+                    System.out.println("<<<<<<<<EXITING PROGRAM>>>>>>>>");
+                    System.exit(0);
+
+                    break;
+                default:
+                    break;
+            }
         }
-        }
-        
+
     }
 }

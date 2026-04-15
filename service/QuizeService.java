@@ -11,7 +11,6 @@ public class QuizeService {
         public static HashMap<String, List<Question>> loadQuestion() {
                 HashMap<String, List<Question>> categoryQuestion = new HashMap<>();
                 List<Question> javaQuestion = new ArrayList<>();
-                
 
                 HashMap<String, String> mcqQues1 = new HashMap<>();
                 mcqQues1.put("a", " 0");
@@ -118,8 +117,6 @@ public class QuizeService {
 
                 categoryQuestion.put("java", javaQuestion);
 
-
-
                 List<Question> sciencQuestion = new ArrayList<>();
                 HashMap<String, String> mcq1 = new HashMap<>();
 
@@ -206,137 +203,97 @@ public class QuizeService {
                 sciencQuestion.add(SQ10);
                 categoryQuestion.put("Science", sciencQuestion);
 
- 
-
-
-
-
-                List<Question> gkQuestion= new ArrayList<>();
-                HashMap<String ,String> gmcq1= new HashMap<>();
-                gmcq1.put( " a",  "Mumbai");
-                gmcq1.put( "b",  "New Delhi");
-                gmcq1.put( "c",  " Kolkata");
-                gmcq1.put( "d",  "chennai");
-                Question GkQ1=new Question( "❓Question 1 \n What is the capital of India?", gmcq1,  "b");
+                List<Question> gkQuestion = new ArrayList<>();
+                HashMap<String, String> gmcq1 = new HashMap<>();
+                gmcq1.put(" a", "Mumbai");
+                gmcq1.put("b", "New Delhi");
+                gmcq1.put("c", " Kolkata");
+                gmcq1.put("d", "chennai");
+                Question GkQ1 = new Question("❓Question 1 \n What is the capital of India?", gmcq1, "b");
                 gkQuestion.add(GkQ1);
- 
 
+                HashMap<String, String> gmcq2 = new HashMap<>();
+                gmcq1.put(" a", "Jawaharlal Nehru");
+                gmcq1.put("b", "Subhas Chandra Bose");
+                gmcq1.put("c", "Mahatma Gandhi");
+                gmcq1.put("d", "Bhagat Singh");
+                Question GkQ2 = new Question("❓Question 2 \n Who is known as the Father of the Nation in India?", gmcq1,
+                                "c");
+                gkQuestion.add(GkQ2);
 
-                HashMap<String ,String> gmcq2= new HashMap<>();
-                 gmcq1.put( " a",  "Jawaharlal Nehru");
-                gmcq1.put( "b",  "Subhas Chandra Bose");
-                gmcq1.put( "c",  "Mahatma Gandhi");
-                gmcq1.put( "d",  "Bhagat Singh");
-                Question GkQ2=new Question( "❓Question 2 \n Who is known as the Father of the Nation in India?", gmcq1,  "c");
-gkQuestion.add(GkQ2);
+                HashMap<String, String> gmcq3 = new HashMap<>();
+                gmcq1.put(" a", "Venus");
+                gmcq1.put("b", "Mars");
+                gmcq1.put("c", "Jupiter");
+                gmcq1.put("d", "Saturn");
+                Question GkQ3 = new Question("❓Question 3 \n Which planet is known as the Red Planet?", gmcq3, "b");
+                gkQuestion.add(GkQ3);
 
+                HashMap<String, String> gmcq4 = new HashMap<>();
+                gmcq1.put(" a", "5");
+                gmcq1.put("b", "6");
+                gmcq1.put("c", "7");
+                gmcq1.put("d", "8");
+                Question GkQ4 = new Question("❓Question 4 \n How many continents are there in the world?", gmcq4, "c");
 
- 
+                gkQuestion.add(GkQ4);
 
+                HashMap<String, String> gmcq5 = new HashMap<>();
+                gmcq1.put(" a", "Atlantic Ocean");
+                gmcq1.put("b", "Indian Ocean");
+                gmcq1.put("c", "Pacific Ocean");
+                gmcq1.put("d", " Arctic Ocean");
+                Question GkQ5 = new Question("❓Question 5 \n What is the largest ocean on Earth?", gmcq5, "c");
 
-                HashMap<String ,String> gmcq3= new HashMap<>();
-                 gmcq1.put( " a",  "Venus");
-                gmcq1.put( "b",  "Mars");
-                gmcq1.put( "c",  "Jupiter");
-                gmcq1.put( "d",  "Saturn");
-                Question GkQ3=new Question( "❓Question 3 \n Which planet is known as the Red Planet?", gmcq3,  "b");
-gkQuestion.add(GkQ3);
+                gkQuestion.add(GkQ5);
 
+                HashMap<String, String> gmcq6 = new HashMap<>();
+                gmcq1.put(" a", "Isaac Newton");
+                gmcq1.put("b", "Albert Einstein");
+                gmcq1.put("c", "Thomas Edison");
+                gmcq1.put("d", "Nikola Tesla");
+                Question GkQ6 = new Question("❓Question 6 \n Who invented the light bulb?", gmcq6, "c");
 
+                gkQuestion.add(GkQ6);
 
+                HashMap<String, String> gmcq7 = new HashMap<>();
+                gmcq1.put(" a", "Lion");
+                gmcq1.put("b", "Elephant");
+                gmcq1.put("c", "Tiger");
+                gmcq1.put("d", "Leopard");
+                Question GkQ7 = new Question("❓Question 7 \n  What is the national animal of India?", gmcq7, "c");
 
- 
- 
+                gkQuestion.add(GkQ7);
 
+                HashMap<String, String> gmcq8 = new HashMap<>();
+                gmcq1.put(" a", "Oxygen");
+                gmcq1.put("b", "Nitrogen");
+                gmcq1.put("c", "Carbon Dioxide");
+                gmcq1.put("d", "Hydrogen");
+                Question GkQ8 = new Question("❓Question 8 \n Which gas do plants use during photosynthesis?", gmcq8,
+                                "c");
 
-                HashMap<String ,String> gmcq4= new HashMap<>();
-                 gmcq1.put( " a",  "5");
-                gmcq1.put( "b",  "6");
-                gmcq1.put( "c",  "7");
-                gmcq1.put( "d",  "8");
-                Question GkQ4=new Question( "❓Question 4 \n How many continents are there in the world?", gmcq4,  "c");
+                gkQuestion.add(GkQ8);
 
+                HashMap<String, String> gmcq9 = new HashMap<>();
+                gmcq1.put(" a", "Rabindranath Tagore");
+                gmcq1.put("b", " Bankim Chandra Chatterjee");
+                gmcq1.put("c", " Sarojini Naidu");
+                gmcq1.put("d", " Premchand");
+                Question GkQ9 = new Question("❓Question 9 \n Who wrote the Indian National Anthem?", gmcq9, "a");
 
-gkQuestion.add(GkQ4);
+                gkQuestion.add(GkQ9);
 
+                HashMap<String, String> gmcq10 = new HashMap<>();
+                gmcq1.put(" a", "Doller");
+                gmcq1.put("b", " Yen");
+                gmcq1.put("c", "won");
+                gmcq1.put("d", "Peso");
+                Question GkQ10 = new Question("❓Question 10 \n  What is the currency of Japan?", gmcq10, "b");
 
- 
+                gkQuestion.add(GkQ10);
 
-                 HashMap<String ,String> gmcq5= new HashMap<>();
-                 gmcq1.put( " a",  "Atlantic Ocean");
-                gmcq1.put( "b",  "Indian Ocean");
-                gmcq1.put( "c",  "Pacific Ocean");
-                gmcq1.put( "d",  " Arctic Ocean");
-                Question GkQ5=new Question( "❓Question 5 \n What is the largest ocean on Earth?", gmcq5,  "c");
-
-gkQuestion.add(GkQ5);
-
-
- 
-                 HashMap<String ,String> gmcq6= new HashMap<>();
-                 gmcq1.put( " a",  "Isaac Newton");
-                gmcq1.put( "b",  "Albert Einstein");
-                gmcq1.put( "c",  "Thomas Edison");
-                gmcq1.put( "d",  "Nikola Tesla");
-                Question GkQ6=new Question( "❓Question 6 \n Who invented the light bulb?", gmcq6,  "c");
-
-gkQuestion.add(GkQ6);
-
-
-
- 
-
-                 HashMap<String ,String> gmcq7= new HashMap<>();
-                 gmcq1.put( " a",  "Lion");
-                gmcq1.put( "b",  "Elephant");
-                gmcq1.put( "c",  "Tiger");
-                gmcq1.put( "d",  "Leopard");
-                Question GkQ7=new Question( "❓Question 7 \n  What is the national animal of India?", gmcq7,  "c");
-
-
-gkQuestion.add(GkQ7);
-
- 
-
-                 HashMap<String ,String> gmcq8= new HashMap<>();
-                 gmcq1.put( " a",  "Oxygen");
-                gmcq1.put( "b",  "Nitrogen");
-                gmcq1.put( "c",  "Carbon Dioxide");
-                gmcq1.put( "d",  "Hydrogen");
-                Question GkQ8=new Question( "❓Question 8 \n Which gas do plants use during photosynthesis?", gmcq8,  "c");
-
-gkQuestion.add(GkQ8);
-
-
-
- 
-
-                 HashMap<String ,String> gmcq9= new HashMap<>();
-                 gmcq1.put( " a",  "Rabindranath Tagore");
-                gmcq1.put( "b",  " Bankim Chandra Chatterjee");
-                gmcq1.put( "c",  " Sarojini Naidu");
-                gmcq1.put( "d",  " Premchand");
-                Question GkQ9=new Question( "❓Question 9 \n Who wrote the Indian National Anthem?", gmcq9,  "a");
-
-
-gkQuestion.add(GkQ9);
-
-
-
- 
-                 HashMap<String ,String> gmcq10= new HashMap<>();
-                 gmcq1.put( " a",  "Doller");
-                gmcq1.put( "b",  " Yen");
-                gmcq1.put( "c",  "won");
-                gmcq1.put( "d",  "Peso");
-                Question GkQ10=new Question( "❓Question 10 \n  What is the currency of Japan?", gmcq10,  "b");
-
-
-gkQuestion.add(GkQ10);
-
-
-
-                categoryQuestion.put( "gk", gkQuestion);
+                categoryQuestion.put("gk", gkQuestion);
 
                 return categoryQuestion;
         }

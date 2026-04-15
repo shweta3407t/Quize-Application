@@ -7,16 +7,12 @@ public class Question {
     public HashMap<String, String> mcq;
     public String correctAns;
 
-    public  int score;
+    public int score;
 
     public Question(String q, HashMap<String, String> mcq, String corrAns) {
         this.question = q;
         this.mcq = mcq;
         this.correctAns = corrAns;
-    }
-
-    public void score(  int score){
-        this.score=score;
     }
 
     public String getQuestion() {
@@ -31,7 +27,7 @@ public class Question {
         return correctAns;
     }
 
-    public int getScore(){
+    public int getScore() {
         return score;
     }
 }

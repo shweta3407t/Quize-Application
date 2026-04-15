@@ -11,6 +11,7 @@ public class Category {
                 J : JAVA
                 S : SCIENCE
                 GK : GENERAL KNOWLEDGE
+                r : RETURN CATEGORY
                 """);
         System.out.print("SELECT CATEGORY : ");
         String category = sc.nextLine().toLowerCase();
@@ -18,8 +19,8 @@ public class Category {
 
         switch (category) {
             case "j":
-                List<Question> javaQuestions = storeQuestion.get("java");
 
+                List<Question> javaQuestions = storeQuestion.get("java");
                 printQuestions(sc, javaQuestions);
                 break;
             case "s":
@@ -30,6 +31,10 @@ public class Category {
                 List<Question> gkQuestions = storeQuestion.get("gk");
                 printQuestions(sc, gkQuestions);
                 break;
+
+            case "r":
+
+                return;
             case "e":
                 System.exit(0);
 
@@ -40,8 +45,10 @@ public class Category {
 
     }
 
+    static int score = 0;
+
     private static void printQuestions(Scanner sc, List<Question> question) {
-            int score = 1;
+        score = 0;
         for (int i = 0; i < question.size(); i++) {
             Question q = question.get(i);
             System.out.println(q.getQuestion());
@@ -56,16 +63,24 @@ public class Category {
 
             String corrans = q.getCorrAns();
             if (ans.matches(corrans)) {
-                 q.score++;
-                System.out.println("\n ✅ CORRECT ANSWER . " );
-                 
+
+                score += 1;
+                System.out.println("\n ✅ CORRECT ANSWER . ");
+                System.out.println("score : " + score);
+
             } else {
-                System.out.println("\n ❌ Wrong! ✅ Correct answer : "   );
+                System.out.println("\n ❌ Wrong! ✅ Correct answer : ");
+                System.out.println("score : " + score);
+
             }
+
+            model.Category.calculateScore();
         }
 
     }
 
-    
+    public static int calculateScore() {
+        return score;
+    }
 
 }
