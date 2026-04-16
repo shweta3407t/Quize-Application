@@ -9,8 +9,13 @@ public class Main {
         HashMap<String, List<Question>> map = new HashMap<>();
         Scanner sc = new Scanner(System.in);
 
-        while (true) {
+
+        try {
+             while (true) {
+
+
             System.out.println("""
+                    -------------QUIZE START------------                
                     ENTER :
                     VC : VIEW CATEGORY
                     VS : VIEW SCORE
@@ -19,6 +24,13 @@ public class Main {
                             """);
             System.out.print("YOUR CHOICE : ");
             String choice = sc.nextLine().toLowerCase();
+
+            boolean isValide=utils.InputValidator.isCharacter(choice);
+
+            if(isValide){
+                System.out.println("ERROR : CHOICE SHOULD BE IN CHARACTER");
+                continue;
+            }
 
             switch (choice) {
                 case "vc":
@@ -41,6 +53,12 @@ public class Main {
                     break;
             }
         }
+            
+        } catch (Exception e) {
+           System.out.println("EXCEPTION : "+ e);
+        }
+
+        
 
     }
 }
